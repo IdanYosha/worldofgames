@@ -19,7 +19,7 @@ pipeline {
         }
         stage ('#3 run Dockerfile') {
             steps {
-                bat 'docker run --name games-container -d -t -p 8777:80 worldofgames'
+                bat 'docker run --name games-container -d -t -p 8777:80 idanyosha/worldofgames'
 
                 }
         }
