@@ -33,6 +33,7 @@ pipeline {
             steps {
                 bat 'docker stop games-container'
                 bat 'docker rm games-container'
+				bat 'docker push idanyosha/worldofgames'
                 }
         }   
             
