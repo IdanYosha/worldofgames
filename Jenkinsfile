@@ -13,7 +13,7 @@ pipeline {
         }
         stage ('#2 Build Dockerfile') {
             steps {
-                bat 'docker build -t worldofgames .'
+                bat 'docker build -t idanyosha/worldofgames .'
 
                 }
         }
@@ -32,8 +32,8 @@ pipeline {
         stage ('#5 stop and delete containers') {
             steps {
                 bat 'docker stop games-container'
+                bat 'docker push idanyosha/worldofgames'
                 bat 'docker rm games-container'
-				bat 'docker push idanyosha/worldofgames'
                 }
         }   
             
